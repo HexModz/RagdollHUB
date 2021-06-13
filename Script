@@ -159,7 +159,7 @@ UICorner_8.CornerRadius = UDim.new(0, 15)
 UICorner_8.Parent = Author
 
 -- Script
-local function MBBCTLS_fake_script() 
+local function BombScript() 
 	local script = Instance.new('LocalScript', Bomb)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -172,9 +172,9 @@ local function MBBCTLS_fake_script()
 	end)
 end
 
-coroutine.wrap(MBBCTLS_fake_script)()
+coroutine.wrap(BombScript)()
 
-local function UDCLB_fake_script()
+local function DragScript()
 	local script = Instance.new('LocalScript', RagdollHUB)
 
 	local UIS = game:GetService("UserInputService")
@@ -189,6 +189,7 @@ local function UDCLB_fake_script()
 			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
 			game:GetService("TweenService"):Create(RagdollHUB, TweenInfo.new(0.25), {Position = Position}):Play()
 		end
+		
 		RagdollHUB.InputBegan:Connect(function(input)
 			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
 				dragToggle = true
@@ -216,8 +217,9 @@ local function UDCLB_fake_script()
 	draggable(script.Parent)
 end
 
-coroutine.wrap(UDCLB_fake_script)()
-local function HJRA_fake_script()
+coroutine.wrap(DragScript)()
+
+local function CloseScript()
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local plrs = game:GetService("Players")
@@ -238,4 +240,4 @@ local function HJRA_fake_script()
 	end
 	mouse.KeyDown:Connect(press)
 end
-coroutine.wrap(HJRA_fake_script)()
+coroutine.wrap(CloseScript)()
