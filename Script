@@ -190,7 +190,7 @@ local function UDCLB_fake_script()
 			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
 			game:GetService("TweenService"):Create(RagdollHUB, TweenInfo.new(0.25), {Position = Position}):Play()
 		end
-		RagdollHUB.InputBegan:Connect(function(input)
+		Username.InputBegan:Connect(function(input)
 			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
 				dragToggle = true
 				dragStart = input.Position
@@ -202,7 +202,7 @@ local function UDCLB_fake_script()
 				end)
 			end
 		end)
-		RagdollHUB.InputChanged:Connect(function(input)
+		Username.InputChanged:Connect(function(input)
 			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 				dragInput = input
 			end
