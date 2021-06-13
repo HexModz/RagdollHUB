@@ -1,0 +1,242 @@
+-- Made by Euphoria #3915 / AyeItzMexy
+
+local ScreenGui = Instance.new("ScreenGui")
+local RagdollHUB = Instance.new("Frame")
+local Title = Instance.new("Frame")
+local Ragdoll = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local HUB = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+local TopSplit = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local BottomSplit = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local Main = Instance.new("Frame")
+local Explode = Instance.new("TextBox")
+local Bomb = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Username = Instance.new("TextBox")
+local UICorner_7 = Instance.new("UICorner")
+local Subtitle = Instance.new("Frame")
+local Author = Instance.new("TextBox")
+local UICorner_8 = Instance.new("UICorner")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+RagdollHUB.Name = "RagdollHUB"
+RagdollHUB.Parent = ScreenGui
+RagdollHUB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RagdollHUB.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RagdollHUB.Position = UDim2.new(0.200581387, 0, 0.285240501, 0)
+RagdollHUB.Size = UDim2.new(0, 412, 0, 258)
+
+Title.Name = "Title"
+Title.Parent = RagdollHUB
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.Size = UDim2.new(0, 412, 0, 26)
+
+Ragdoll.Name = "Ragdoll"
+Ragdoll.Parent = Title
+Ragdoll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Ragdoll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ragdoll.Position = UDim2.new(0.340339184, 0, 0.115384616, 0)
+Ragdoll.Size = UDim2.new(0, 60, 0, 25)
+Ragdoll.Font = Enum.Font.Arial
+Ragdoll.Text = "Ragdoll"
+Ragdoll.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ragdoll.TextSize = 20.000
+
+UICorner.CornerRadius = UDim.new(0, 29)
+UICorner.Parent = Ragdoll
+
+HUB.Name = "HUB"
+HUB.Parent = Title
+HUB.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+HUB.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HUB.Position = UDim2.new(0.501985788, 0, 0.19230777, 0)
+HUB.Size = UDim2.new(0, 50, 0, 21)
+HUB.Font = Enum.Font.ArialBold
+HUB.Text = "HUB"
+HUB.TextColor3 = Color3.fromRGB(0, 0, 0)
+HUB.TextSize = 24.000
+HUB.TextWrapped = true
+HUB.TextXAlignment = Enum.TextXAlignment.Right
+
+UICorner_2.CornerRadius = UDim.new(0, 4)
+UICorner_2.Parent = HUB
+
+UICorner_3.CornerRadius = UDim.new(0, 29)
+UICorner_3.Parent = RagdollHUB
+
+TopSplit.Name = "Top Split"
+TopSplit.Parent = RagdollHUB
+TopSplit.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+TopSplit.BorderColor3 = Color3.fromRGB(255, 194, 11)
+TopSplit.Position = UDim2.new(0, 0, 0.108527131, 0)
+TopSplit.Size = UDim2.new(0, 412, 0, 2)
+
+UICorner_4.Parent = TopSplit
+
+BottomSplit.Name = "Bottom Split"
+BottomSplit.Parent = RagdollHUB
+BottomSplit.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+BottomSplit.BorderColor3 = Color3.fromRGB(255, 194, 11)
+BottomSplit.Position = UDim2.new(0, 0, 0.883720934, 0)
+BottomSplit.Size = UDim2.new(0, 412, 0, 2)
+
+UICorner_5.Parent = BottomSplit
+
+Main.Name = "Main"
+Main.Parent = RagdollHUB
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.Position = UDim2.new(0, 0, 0, 31)
+Main.Size = UDim2.new(0, 412, 0, 196)
+
+Explode.Name = "Explode"
+Explode.Parent = Main
+Explode.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Explode.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Explode.Position = UDim2.new(0, 106, 0, 0)
+Explode.Size = UDim2.new(0, 200, 0, 24)
+Explode.Font = Enum.Font.Arial
+Explode.Text = "Explode"
+Explode.TextColor3 = Color3.fromRGB(255, 255, 255)
+Explode.TextSize = 20.000
+
+Bomb.Name = "Bomb"
+Bomb.Parent = Main
+Bomb.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+Bomb.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bomb.Position = UDim2.new(0, 176, 0, 127)
+Bomb.Size = UDim2.new(0, 60, 0, 28)
+Bomb.Font = Enum.Font.ArialBold
+Bomb.Text = "Bomb"
+Bomb.TextColor3 = Color3.fromRGB(0, 0, 0)
+Bomb.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(0, 20)
+UICorner_6.Parent = Bomb
+
+Username.Name = "Username"
+Username.Parent = Main
+Username.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+Username.Position = UDim2.new(0, 147, 0, 55)
+Username.Size = UDim2.new(0, 117, 0, 32)
+Username.Font = Enum.Font.SourceSans
+Username.Text = ""
+Username.TextColor3 = Color3.fromRGB(0, 0, 0)
+Username.TextSize = 14.000
+
+UICorner_7.CornerRadius = UDim.new(0, 10)
+UICorner_7.Parent = Username
+
+Subtitle.Name = "Subtitle"
+Subtitle.Parent = RagdollHUB
+Subtitle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Subtitle.BackgroundTransparency = 1.000
+Subtitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Subtitle.Position = UDim2.new(0, 0, 0, 230)
+Subtitle.Size = UDim2.new(0, 412, 0, 28)
+
+Author.Name = "Author"
+Author.Parent = Subtitle
+Author.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+Author.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Author.Position = UDim2.new(0, 131, 0, 4)
+Author.Size = UDim2.new(0, 150, 0, 20)
+Author.Font = Enum.Font.SourceSans
+Author.Text = "Made By:  Euphoria #3915"
+Author.TextColor3 = Color3.fromRGB(0, 0, 0)
+Author.TextSize = 14.000
+
+UICorner_8.CornerRadius = UDim.new(0, 15)
+UICorner_8.Parent = Author
+
+-- Script
+local function MBBCTLS_fake_script() 
+	local script = Instance.new('LocalScript', Bomb)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for j, k in pairs(game.Players:GetChildren()) do
+			if k.Backpack:FindFirstChild("ImpulseGrenade") then
+				game.Players:FindFirstChild(k.Name).Backpack:FindFirstChild("ImpulseGrenade"):FindFirstChild("CreateGrenade"):FireServer(CFrame.new(0,0,0), game.Players:FindFirstChild(Username.Text).Character:FindFirstChild("HumanoidRootPart").CFrame)
+				break;
+			end
+		end
+	end)
+
+
+end
+coroutine.wrap(MBBCTLS_fake_script)()
+
+local function UDCLB_fake_script()
+	local script = Instance.new('LocalScript', RagdollHUB)
+
+	local UIS = game:GetService("UserInputService")
+	function draggable(RagdollHUB)
+		dragToggle = nil
+		local dragSpeed = 3
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(RagdollHUB, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		RagdollHUB.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = RagdollHUB.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		RagdollHUB.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+
+	draggable(script.Parent)
+end
+coroutine.wrap(UDCLB_fake_script)()
+local function HJRA_fake_script()
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local plrs = game:GetService("Players")
+	local RagdollHUB = script.Parent
+	local open = false
+	local plr = plrs.LocalPlayer
+	local mouse = plr:GetMouse()
+	function press(key)
+		if (key == "v") then
+			if (open == true) then
+				RagdollHUB.Enabled = false
+				open = false
+			elseif (open == false) then
+				RagdollHUB.Enabled = true
+				open = true
+			end
+		end
+	end
+
+	mouse.KeyDown:Connect(press)
+end
+coroutine.wrap(HJRA_fake_script)()
