@@ -170,9 +170,8 @@ local function MBBCTLS_fake_script()
 			end
 		end
 	end)
-
-
 end
+
 coroutine.wrap(MBBCTLS_fake_script)()
 
 local function UDCLB_fake_script()
@@ -190,7 +189,7 @@ local function UDCLB_fake_script()
 			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
 			game:GetService("TweenService"):Create(RagdollHUB, TweenInfo.new(0.25), {Position = Position}):Play()
 		end
-		Username.InputBegan:Connect(function(input)
+		RagdollHUB.InputBegan:Connect(function(input)
 			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
 				dragToggle = true
 				dragStart = input.Position
@@ -202,7 +201,8 @@ local function UDCLB_fake_script()
 				end)
 			end
 		end)
-		Username.InputChanged:Connect(function(input)
+		
+		RagdollHUB.InputChanged:Connect(function(input)
 			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 				dragInput = input
 			end
@@ -213,9 +213,9 @@ local function UDCLB_fake_script()
 			end
 		end)
 	end
-
 	draggable(script.Parent)
 end
+
 coroutine.wrap(UDCLB_fake_script)()
 local function HJRA_fake_script()
 	local script = Instance.new('LocalScript', ScreenGui)
@@ -236,7 +236,6 @@ local function HJRA_fake_script()
 			end
 		end
 	end
-
 	mouse.KeyDown:Connect(press)
 end
 coroutine.wrap(HJRA_fake_script)()
