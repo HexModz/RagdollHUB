@@ -20,8 +20,6 @@ local Username = Instance.new("TextBox")
 local UICorner_7 = Instance.new("UICorner")
 local AntiRagdoll = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
-local AntiFP = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
 local Subtitle = Instance.new("Frame")
 local Version = Instance.new("TextLabel")
 local Author = Instance.new("TextLabel")
@@ -165,31 +163,6 @@ end)
 
 UICorner_8.CornerRadius = UDim.new(0, 20)
 UICorner_8.Parent = AntiRagdoll
-
-AntiFP.Name = "Anti-FP"
-AntiFP.Parent = Main
-AntiFP.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
-AntiFP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AntiFP.Position = UDim2.new(0.640776694, 0, 0.627551019, 0)
-AntiFP.Size = UDim2.new(0, 140, 0, 35)
-AntiFP.Font = Enum.Font.ArialBold
-AntiFP.Text = "Anti-First Person"
-AntiFP.TextColor3 = Color3.fromRGB(0, 0, 0)
-AntiFP.TextSize = 15.000
---Script
-AntiRagdoll.MouseButton1Down:connect(function()
-_G.antiFP = true
-	while _G.antiFP == true do
-local lp = game:GetService("Players").LocalPlayer
-lp.Character["FirstPerson"]:Destroy()
-lp.Character.LocalScript:Destroy()
-lp.Character["State Handler"]:Destroy()
-lp.Character.LocalScript:Destroy()
-	end
-end)
-
-UICorner_9.CornerRadius = UDim.new(0, 20)
-UICorner_9.Parent = AntiFP
 
 Subtitle.Name = "Subtitle"
 Subtitle.Parent = RagdollHUB
