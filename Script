@@ -152,9 +152,10 @@ AntiRagdoll.Font = Enum.Font.ArialBold
 AntiRagdoll.Text = "Anti-Ragdoll"
 AntiRagdoll.TextColor3 = Color3.fromRGB(0, 0, 0)
 AntiRagdoll.TextSize = 15.000
-spamTapOn.MouseButton1Down:connect(function()
-	_G.antiRagdoll = true
-	while _G.antiRagdoll == true do
+--Script
+AntiRagdoll.MouseButton1Down:connect(function()
+	_G.AntiRagdoll = true
+	while _G.AntiRagdoll == true do
 local lp = game:GetService("Players").LocalPlayer
 lp.Character["Local Ragdoll"]:Destroy()
 lp.Character.Controls:Destroy()
@@ -176,7 +177,8 @@ AntiFP.Font = Enum.Font.ArialBold
 AntiFP.Text = "Anti-First Person"
 AntiFP.TextColor3 = Color3.fromRGB(0, 0, 0)
 AntiFP.TextSize = 15.000
-
+--Script
+AntiRagdoll.MouseButton1Down:connect(function()
 _G.antiFP = true
 	while _G.antiFP == true do
 local lp = game:GetService("Players").LocalPlayer
