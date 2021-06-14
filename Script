@@ -159,8 +159,7 @@ AntiRagdoll.MouseButton1Down:connect(function()
 local lp = game:GetService("Players").LocalPlayer
 lp.Character["Local Ragdoll"]:Destroy()
 lp.Character.Controls:Destroy()
-lp.Character["State Handler"]:Destroy()
-lp.Character.LocalScript:Destroy()
+
 	end
 end)
 
@@ -183,6 +182,8 @@ _G.antiFP = true
 	while _G.antiFP == true do
 local lp = game:GetService("Players").LocalPlayer
 lp.Character["FirstPerson"]:Destroy()
+lp.Character.LocalScript:Destroy()
+lp.Character["State Handler"]:Destroy()
 lp.Character.LocalScript:Destroy()
 	end
 end)
