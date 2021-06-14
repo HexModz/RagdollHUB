@@ -3,9 +3,9 @@
 local ScreenGui = Instance.new("ScreenGui")
 local RagdollHUB = Instance.new("Frame")
 local Title = Instance.new("Frame")
-local Ragdoll = Instance.new("TextLabel")
-local UICorner = Instance.new("UICorner")
 local HUB = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local Ragdoll = Instance.new("TextLabel")
 local UICorner_2 = Instance.new("UICorner")
 local UICorner_3 = Instance.new("UICorner")
 local TopSplit = Instance.new("Frame")
@@ -13,15 +13,20 @@ local UICorner_4 = Instance.new("UICorner")
 local BottomSplit = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
 local Main = Instance.new("Frame")
-local Explode = Instance.new("TextLabel")
+local Explode = Instance.new("TextBox")
 local Bomb = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local Username = Instance.new("TextBox")
 local UICorner_7 = Instance.new("UICorner")
-local Subtitle = Instance.new("Frame")
-local Author = Instance.new("TextLabel")
+local AntiRagdoll = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
+local AntiFP = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Subtitle = Instance.new("Frame")
 local Version = Instance.new("TextLabel")
+local Author = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+
 
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -136,6 +141,52 @@ Username.TextSize = 14.000
 
 UICorner_7.CornerRadius = UDim.new(0, 10)
 UICorner_7.Parent = Username
+
+AntiRagdoll.Name = "Anti-Ragdoll"
+AntiRagdoll.Parent = Main
+AntiRagdoll.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+AntiRagdoll.BorderColor3 = Color3.fromRGB(255, 194, 11)
+AntiRagdoll.Position = UDim2.new(0.0533980578, 0, 0.632653058, 0)
+AntiRagdoll.Size = UDim2.new(0, 96, 0, 32)
+AntiRagdoll.Font = Enum.Font.ArialBold
+AntiRagdoll.Text = "Anti-Ragdoll"
+AntiRagdoll.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiRagdoll.TextSize = 15.000
+spamTapOn.MouseButton1Down:connect(function()
+	_G.antiRagdoll = true
+	while _G.antiRagdoll == true do
+local lp = game:GetService("Players").LocalPlayer
+lp.Character["Local Ragdoll"]:Destroy()
+lp.Character.Controls:Destroy()
+lp.Character["State Handler"]:Destroy()
+lp.Character.LocalScript:Destroy()
+	end
+end)
+
+UICorner_8.CornerRadius = UDim.new(0, 20)
+UICorner_8.Parent = AntiRagdoll
+
+AntiFP.Name = "Anti-FP"
+AntiFP.Parent = Main
+AntiFP.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+AntiFP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AntiFP.Position = UDim2.new(0.640776694, 0, 0.627551019, 0)
+AntiFP.Size = UDim2.new(0, 140, 0, 35)
+AntiFP.Font = Enum.Font.ArialBold
+AntiFP.Text = "Anti-First Person"
+AntiFP.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiFP.TextSize = 15.000
+
+_G.antiFP = true
+	while _G.antiFP == true do
+local lp = game:GetService("Players").LocalPlayer
+lp.Character["FirstPerson"]:Destroy()
+lp.Character.LocalScript:Destroy()
+	end
+end)
+
+UICorner_9.CornerRadius = UDim.new(0, 20)
+UICorner_9.Parent = AntiFP
 
 Subtitle.Name = "Subtitle"
 Subtitle.Parent = RagdollHUB
