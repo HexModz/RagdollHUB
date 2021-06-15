@@ -12,7 +12,7 @@ local TopSplit = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
 local BottomSplit = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
-local Page1 = Instance.new("Frame")
+local ServerSide = Instance.new("Frame")
 local Bomb = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local Username = Instance.new("TextBox")
@@ -21,14 +21,18 @@ local AntiRagdoll = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local InvisTools = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
-local Client = Instance.new("TextLabel")
-local UICorner_10 = Instance.new("UICorner")
-local ServerSide = Instance.new("TextLabel")
-local UICorner_11 = Instance.new("UICorner")
 local Subtitle = Instance.new("Frame")
 local Version = Instance.new("TextLabel")
 local Author = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local Tabs = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local Client = Instance.new("TextLabel")
 local UICorner_12 = Instance.new("UICorner")
+local ServerSide_2 = Instance.new("TextLabel")
+local UICorner_13 = Instance.new("UICorner")
+local Changelog = Instance.new("TextLabel")
+local UICorner_14 = Instance.new("UICorner")
 
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -98,18 +102,18 @@ BottomSplit.Size = UDim2.new(0, 412, 0, 2)
 
 UICorner_5.Parent = BottomSplit
 
-Page1.Name = "Page1"
-Page1.Parent = RagdollHUB
-Page1.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Page1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Page1.Position = UDim2.new(0, 0, 0, 31)
-Page1.Size = UDim2.new(0, 412, 0, 196)
+ServerSide.Name = "ServerSide"
+ServerSide.Parent = RagdollHUB
+ServerSide.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+ServerSide.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ServerSide.Position = UDim2.new(0, 0, 0, 31)
+ServerSide.Size = UDim2.new(0, 412, 0, 196)
 
 Bomb.Name = "Bomb"
-Bomb.Parent = Page1
+Bomb.Parent = ServerSide
 Bomb.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
 Bomb.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Bomb.Position = UDim2.new(0, 50, 0, 84)
+Bomb.Position = UDim2.new(0, 50, 0, 150)
 Bomb.Size = UDim2.new(0, 60, 0, 28)
 Bomb.Font = Enum.Font.ArialBold
 Bomb.Text = "Bomb"
@@ -120,12 +124,12 @@ UICorner_6.CornerRadius = UDim.new(0, 20)
 UICorner_6.Parent = Bomb
 
 Username.Name = "Username"
-Username.Parent = Page1
+Username.Parent = ServerSide
 Username.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
-Username.Position = UDim2.new(0, 21, 0, 41)
+Username.Position = UDim2.new(0, 21, 0, 105)
 Username.Size = UDim2.new(0, 117, 0, 32)
 Username.Font = Enum.Font.SourceSans
-Username.Text = "Type Name Here"
+Username.Text = ""
 Username.TextColor3 = Color3.fromRGB(0, 0, 0)
 Username.TextSize = 14.000
 
@@ -133,10 +137,10 @@ UICorner_7.CornerRadius = UDim.new(0, 10)
 UICorner_7.Parent = Username
 
 AntiRagdoll.Name = "Anti-Ragdoll"
-AntiRagdoll.Parent = Page1
+AntiRagdoll.Parent = ServerSide
 AntiRagdoll.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
 AntiRagdoll.BorderColor3 = Color3.fromRGB(255, 194, 11)
-AntiRagdoll.Position = UDim2.new(0.689320385, 0, 0.209183663, 0)
+AntiRagdoll.Position = UDim2.new(0.689320385, 0, 0.535714269, 0)
 AntiRagdoll.Size = UDim2.new(0, 96, 0, 32)
 AntiRagdoll.Font = Enum.Font.ArialBold
 AntiRagdoll.Text = "Anti-Ragdoll"
@@ -157,9 +161,9 @@ UICorner_8.CornerRadius = UDim.new(0, 20)
 UICorner_8.Parent = AntiRagdoll
 
 InvisTools.Name = "Invis Tools"
-InvisTools.Parent = Page1
+InvisTools.Parent = ServerSide
 InvisTools.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
-InvisTools.Position = UDim2.new(0.70873791, 0, 0.454081655, 0)
+InvisTools.Position = UDim2.new(0.706310749, 0, 0.755102038, 0)
 InvisTools.Size = UDim2.new(0, 80, 0, 30)
 InvisTools.Font = Enum.Font.ArialBold
 InvisTools.Text = "Invis Tools"
@@ -167,68 +171,42 @@ InvisTools.TextColor3 = Color3.fromRGB(0, 0, 0)
 InvisTools.TextSize = 14.000
 --Script
 InvisTools.MouseButton1Down:connect(function()
-a=game.Players:FindFirstChild("OddPotion",true)
-local Players = game:GetService("Players")
-local localPlayer = Players.LocalPlayer
-local backpack = localPlayer:WaitForChild("Backpack")
+	a=game.Players:FindFirstChild("OddPotion",true)
+	local Players = game:GetService("Players")
+	local localPlayer = Players.LocalPlayer
+	local backpack = localPlayer:WaitForChild("Backpack")
 
-local tool = Instance.new("Tool")
-tool.RequiresHandle = false
-tool.Parent = backpack
-tool.Name = "Invisible Object"
-tool.Equipped:Connect(function(mouse)
-	mouse.Button1Down:Connect(function()
-		if mouse.Target and mouse.Target.Parent then
-			a.TransEvent:FireServer(mouse.Target,1)
-		end
+	local tool = Instance.new("Tool")
+	tool.RequiresHandle = false
+	tool.Parent = backpack
+	tool.Name = "Invisible Object"
+	tool.Equipped:Connect(function(mouse)
+		mouse.Button1Down:Connect(function()
+			if mouse.Target and mouse.Target.Parent then
+				a.TransEvent:FireServer(mouse.Target,1)
+			end
+		end)
+	end)
+	a=game.Players:FindFirstChild("OddPotion",true)
+	local Players = game:GetService("Players")
+	local localPlayer = Players.LocalPlayer
+	local backpack = localPlayer:WaitForChild("Backpack")
+
+	local tool = Instance.new("Tool")
+	tool.RequiresHandle = false
+	tool.Parent = backpack
+	tool.Name = "Visible Object"
+	tool.Equipped:Connect(function(mouse)
+		mouse.Button1Down:Connect(function()
+			if mouse.Target and mouse.Target.Parent then
+				a.TransEvent:FireServer(mouse.Target,0)
+			end
+		end)
 	end)
 end)
-a=game.Players:FindFirstChild("OddPotion",true)
-local Players = game:GetService("Players")
-local localPlayer = Players.LocalPlayer
-local backpack = localPlayer:WaitForChild("Backpack")
-
-local tool = Instance.new("Tool")
-tool.RequiresHandle = false
-tool.Parent = backpack
-tool.Name = "Visible Object"
-tool.Equipped:Connect(function(mouse)
-	mouse.Button1Down:Connect(function()
-		if mouse.Target and mouse.Target.Parent then
-			a.TransEvent:FireServer(mouse.Target,0)
-		end
-	end)
-	end)
-	end)
 
 UICorner_9.CornerRadius = UDim.new(0, 20)
 UICorner_9.Parent = InvisTools
-
-Client.Name = "Client"
-Client.Parent = Page1
-Client.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Client.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Client.Position = UDim2.new(0.611650467, 0, 0, 0)
-Client.Size = UDim2.new(0, 160, 0, 32)
-Client.Font = Enum.Font.ArialBold
-Client.Text = "Client"
-Client.TextColor3 = Color3.fromRGB(255, 255, 255)
-Client.TextSize = 16.000
-
-UICorner_10.Parent = Client
-
-ServerSide.Name = "ServerSide"
-ServerSide.Parent = Page1
-ServerSide.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ServerSide.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ServerSide.Size = UDim2.new(0, 160, 0, 32)
-ServerSide.Font = Enum.Font.ArialBold
-ServerSide.Text = "ServerSide"
-ServerSide.TextColor3 = Color3.fromRGB(255, 255, 255)
-ServerSide.TextSize = 16.000
-ServerSide.TextWrapped = true
-
-UICorner_11.Parent = ServerSide
 
 Subtitle.Name = "Subtitle"
 Subtitle.Parent = RagdollHUB
@@ -246,7 +224,7 @@ Version.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Version.Position = UDim2.new(0.788835049, 0, 0, 0)
 Version.Size = UDim2.new(0, 41, 0, 28)
 Version.Font = Enum.Font.SourceSans
-Version.Text = "V 1.1"
+Version.Text = "V 1.2"
 Version.TextColor3 = Color3.fromRGB(255, 194, 11)
 Version.TextSize = 14.000
 
@@ -262,9 +240,57 @@ Author.Text = "Made By:  Euphoria #3915"
 Author.TextColor3 = Color3.fromRGB(0, 0, 0)
 Author.TextSize = 14.000
 
-UICorner_12.CornerRadius = UDim.new(0, 15)
-UICorner_12.Parent = Author
+UICorner_10.CornerRadius = UDim.new(0, 15)
+UICorner_10.Parent = Author
 
+Tabs.Name = "Tabs"
+Tabs.Parent = RagdollHUB
+Tabs.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Tabs.BorderSizePixel = 0
+Tabs.Position = UDim2.new(0.016990291, 0, 0.137913302, 0)
+Tabs.Size = UDim2.new(0, 398, 0, 34)
+
+UICorner_11.Parent = Tabs
+
+Client.Name = "Client"
+Client.Parent = Tabs
+Client.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Client.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Client.Position = UDim2.new(0.34, 0, 0.1, 0)
+Client.Size = UDim2.new(0, 128, 0, 26)
+Client.Font = Enum.Font.ArialBold
+Client.Text = "Client"
+Client.TextColor3 = Color3.fromRGB(255, 255, 255)
+Client.TextSize = 16.000
+
+UICorner_12.Parent = Client
+
+ServerSide_2.Name = "ServerSide"
+ServerSide_2.Parent = Tabs
+ServerSide_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+ServerSide_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ServerSide_2.Position = UDim2.new(0, 3, 0.1, 0)
+ServerSide_2.Size = UDim2.new(0, 128, 0, 26)
+ServerSide_2.Font = Enum.Font.ArialBold
+ServerSide_2.Text = "ServerSide"
+ServerSide_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ServerSide_2.TextSize = 16.000
+ServerSide_2.TextWrapped = true
+
+UICorner_13.Parent = ServerSide_2
+
+Changelog.Name = "Changelog"
+Changelog.Parent = Tabs
+Changelog.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Changelog.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Changelog.Position = UDim2.new(0.67, 0, 0.1, 0)
+Changelog.Size = UDim2.new(0, 128, 0, 26)
+Changelog.Font = Enum.Font.ArialBold
+Changelog.Text = "Changelog"
+Changelog.TextColor3 = Color3.fromRGB(255, 255, 255)
+Changelog.TextSize = 16.000
+
+UICorner_14.Parent = Changelog
 -- Script
 local function BombScript() 
 	local script = Instance.new('LocalScript', Bomb)
