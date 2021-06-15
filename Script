@@ -1,4 +1,5 @@
 -- Made By Euphoria #3915 / AyeItzMexy
+
 local ScreenGui = Instance.new("ScreenGui")
 local RagdollHUB = Instance.new("Frame")
 local Title = Instance.new("Frame")
@@ -11,7 +12,7 @@ local TopSplit = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
 local BottomSplit = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
-local ServerSide = Instance.new("Frame")
+local Main = Instance.new("Frame")
 local Bomb = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local Username = Instance.new("TextBox")
@@ -25,17 +26,6 @@ local Version = Instance.new("TextLabel")
 local UICorner_10 = Instance.new("UICorner")
 local Author = Instance.new("TextLabel")
 local UICorner_11 = Instance.new("UICorner")
-local TabContainer = Instance.new("Frame")
-local UICorner_12 = Instance.new("UICorner")
-local Changelog = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
-local Client = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
-local ServerSide_2 = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local Containers = Instance.new("Folder")
-local Client_2 = Instance.new("Frame")
-local Changelog_2 = Instance.new("Frame")
 
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -105,15 +95,15 @@ BottomSplit.Size = UDim2.new(0, 412, 0, 2)
 
 UICorner_5.Parent = BottomSplit
 
-ServerSide.Name = "ServerSide"
-ServerSide.Parent = RagdollHUB
-ServerSide.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-ServerSide.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ServerSide.Position = UDim2.new(0, 1, 0, 71)
-ServerSide.Size = UDim2.new(0, 410, 0, 157)
+Main.Name = "Main"
+Main.Parent = RagdollHUB
+Main.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.Position = UDim2.new(0, 1, 0, 30)
+Main.Size = UDim2.new(0, 410, 0, 198)
 
 Bomb.Name = "Bomb"
-Bomb.Parent = ServerSide
+Bomb.Parent = Main
 Bomb.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
 Bomb.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Bomb.Position = UDim2.new(0, 49, 0, 90)
@@ -127,7 +117,7 @@ UICorner_6.CornerRadius = UDim.new(0, 20)
 UICorner_6.Parent = Bomb
 
 Username.Name = "Username"
-Username.Parent = ServerSide
+Username.Parent = Main
 Username.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
 Username.Position = UDim2.new(0, 21, 0, 44)
 Username.Size = UDim2.new(0, 117, 0, 32)
@@ -140,7 +130,7 @@ UICorner_7.CornerRadius = UDim.new(0, 10)
 UICorner_7.Parent = Username
 
 AntiRagdoll.Name = "Anti-Ragdoll"
-AntiRagdoll.Parent = ServerSide
+AntiRagdoll.Parent = Main
 AntiRagdoll.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
 AntiRagdoll.BorderColor3 = Color3.fromRGB(255, 194, 11)
 AntiRagdoll.Position = UDim2.new(0.686893225, 0, 0.280937195, 0)
@@ -164,7 +154,7 @@ UICorner_8.CornerRadius = UDim.new(0, 20)
 UICorner_8.Parent = AntiRagdoll
 
 InvisTools.Name = "Invis Tools"
-InvisTools.Parent = ServerSide
+InvisTools.Parent = Main
 InvisTools.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
 InvisTools.Position = UDim2.new(0.703883588, 0, 0.564019203, 0)
 InvisTools.Size = UDim2.new(0, 80, 0, 30)
@@ -226,7 +216,7 @@ Version.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Version.Position = UDim2.new(0.850000024, 0, 0.0900000036, 0)
 Version.Size = UDim2.new(0, 41, 0, 22)
 Version.Font = Enum.Font.Arial
-Version.Text = "V 1.2"
+Version.Text = "V 1.0"
 Version.TextColor3 = Color3.fromRGB(255, 194, 11)
 Version.TextSize = 15.000
 
@@ -247,81 +237,6 @@ Author.TextSize = 14.000
 
 UICorner_11.CornerRadius = UDim.new(0, 15)
 UICorner_11.Parent = Author
-
-TabContainer.Name = "TabContainer"
-TabContainer.Parent = RagdollHUB
-TabContainer.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-TabContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TabContainer.BorderSizePixel = 0
-TabContainer.Position = UDim2.new(0.016990291, 0, 0.137913302, 0)
-TabContainer.Size = UDim2.new(0, 398, 0, 34)
-
-UICorner_12.CornerRadius = UDim.new(0, 11)
-UICorner_12.Parent = TabContainer
-
-Changelog.Name = "Changelog"
-Changelog.Parent = TabContainer
-Changelog.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Changelog.BorderColor3 = Color3.fromRGB(255, 194, 11)
-Changelog.Position = UDim2.new(0.670000017, 0, 0.100000001, 0)
-Changelog.Size = UDim2.new(0, 128, 0, 26)
-Changelog.Font = Enum.Font.ArialBold
-Changelog.Text = "Changelog"
-Changelog.TextColor3 = Color3.fromRGB(255, 255, 255)
-Changelog.TextSize = 16.000
-Changelog.TextStrokeColor3 = Color3.fromRGB(29, 29, 29)
-
-UICorner_13.CornerRadius = UDim.new(0, 9)
-UICorner_13.Parent = Changelog
-
-Client.Name = "Client"
-Client.Parent = TabContainer
-Client.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Client.BorderColor3 = Color3.fromRGB(255, 194, 11)
-Client.Position = UDim2.new(0.338, 0, 0.100000001, 0)
-Client.Size = UDim2.new(0, 128, 0, 26)
-Client.Font = Enum.Font.ArialBold
-Client.Text = "Client"
-Client.TextColor3 = Color3.fromRGB(255, 255, 255)
-Client.TextSize = 16.000
-Client.TextStrokeColor3 = Color3.fromRGB(29, 29, 29)
-
-UICorner_14.CornerRadius = UDim.new(0, 9)
-UICorner_14.Parent = Client
-
-ServerSide_2.Name = "ServerSide"
-ServerSide_2.Parent = TabContainer
-ServerSide_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-ServerSide_2.BorderColor3 = Color3.fromRGB(255, 194, 11)
-ServerSide_2.Position = UDim2.new(0, 3, 0.100000001, 0)
-ServerSide_2.Size = UDim2.new(0, 128, 0, 26)
-ServerSide_2.Font = Enum.Font.ArialBold
-ServerSide_2.Text = "ServerSide"
-ServerSide_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-ServerSide_2.TextSize = 16.000
-ServerSide_2.TextStrokeColor3 = Color3.fromRGB(29, 29, 29)
-
-UICorner_15.CornerRadius = UDim.new(0, 9)
-UICorner_15.Parent = ServerSide_2
-
-Containers.Name = "Containers"
-Containers.Parent = RagdollHUB
-
-Client_2.Name = "Client"
-Client_2.Parent = Containers
-Client_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Client_2.BackgroundTransparency = 1.000
-Client_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Client_2.Position = UDim2.new(0, 1, 0, 71)
-Client_2.Size = UDim2.new(0, 410, 0, 157)
-
-Changelog_2.Name = "Changelog"
-Changelog_2.Parent = Containers
-Changelog_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Changelog_2.BackgroundTransparency = 1.000
-Changelog_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Changelog_2.Position = UDim2.new(0, 1, 0, 71)
-Changelog_2.Size = UDim2.new(0, 410, 0, 157)
 -- Script
 local function BombScript() 
 	local script = Instance.new('LocalScript', Bomb)
