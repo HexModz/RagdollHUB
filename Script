@@ -1,5 +1,4 @@
 -- Made By Euphoria #3915 / AyeItzMexy
-
 local ScreenGui = Instance.new("ScreenGui")
 local RagdollHUB = Instance.new("Frame")
 local Title = Instance.new("Frame")
@@ -35,8 +34,8 @@ local UICorner_14 = Instance.new("UICorner")
 local ServerSide_2 = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
 local Containers = Instance.new("Folder")
-local Changelog_2 = Instance.new("Frame")
 local Client_2 = Instance.new("Frame")
+local Changelog_2 = Instance.new("Frame")
 
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -109,7 +108,6 @@ UICorner_5.Parent = BottomSplit
 ServerSide.Name = "ServerSide"
 ServerSide.Parent = RagdollHUB
 ServerSide.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-ServerSide.BackgroundTransparency = 1.000
 ServerSide.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ServerSide.Position = UDim2.new(0, 1, 0, 71)
 ServerSide.Size = UDim2.new(0, 410, 0, 157)
@@ -252,7 +250,8 @@ UICorner_11.Parent = Author
 
 TabContainer.Name = "TabContainer"
 TabContainer.Parent = RagdollHUB
-TabContainer.BackgroundColor3 = Color3.fromRGB(85, 255, 0)
+TabContainer.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+TabContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TabContainer.BorderSizePixel = 0
 TabContainer.Position = UDim2.new(0.016990291, 0, 0.137913302, 0)
 TabContainer.Size = UDim2.new(0, 398, 0, 34)
@@ -308,20 +307,21 @@ UICorner_15.Parent = ServerSide_2
 Containers.Name = "Containers"
 Containers.Parent = RagdollHUB
 
+Client_2.Name = "Client"
+Client_2.Parent = Containers
+Client_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Client_2.BackgroundTransparency = 1.000
+Client_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Client_2.Position = UDim2.new(0, 1, 0, 71)
+Client_2.Size = UDim2.new(0, 410, 0, 157)
+
 Changelog_2.Name = "Changelog"
-Changelog_2.Parent = RagdollHUB
+Changelog_2.Parent = Containers
 Changelog_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
 Changelog_2.BackgroundTransparency = 1.000
 Changelog_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Changelog_2.Position = UDim2.new(0, 1, 0, 71)
 Changelog_2.Size = UDim2.new(0, 410, 0, 157)
-
-Client_2.Name = "Client"
-Client_2.Parent = RagdollHUB
-Client_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Client_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Client_2.Position = UDim2.new(0, 1, 0, 71)
-Client_2.Size = UDim2.new(0, 410, 0, 157)
 -- Script
 local function BombScript() 
 	local script = Instance.new('LocalScript', Bomb)
