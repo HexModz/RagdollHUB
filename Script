@@ -261,13 +261,13 @@ UICorner_12.Parent = TabContainer
 
 Changelog.Name = "Changelog"
 Changelog.Parent = TabContainer
-Changelog.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+Changelog.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
 Changelog.BorderColor3 = Color3.fromRGB(255, 194, 11)
 Changelog.Position = UDim2.new(0.670000017, 0, 0.100000001, 0)
 Changelog.Size = UDim2.new(0, 128, 0, 26)
 Changelog.Font = Enum.Font.ArialBold
 Changelog.Text = "Changelog"
-Changelog.TextColor3 = Color3.fromRGB(0, 0, 0)
+Changelog.TextColor3 = Color3.fromRGB(255, 255, 255)
 Changelog.TextSize = 16.000
 Changelog.TextStrokeColor3 = Color3.fromRGB(29, 29, 29)
 
@@ -276,13 +276,13 @@ UICorner_13.Parent = Changelog
 
 Client.Name = "Client"
 Client.Parent = TabContainer
-Client.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+Client.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
 Client.BorderColor3 = Color3.fromRGB(255, 194, 11)
 Client.Position = UDim2.new(0.338, 0, 0.100000001, 0)
 Client.Size = UDim2.new(0, 128, 0, 26)
 Client.Font = Enum.Font.ArialBold
 Client.Text = "Client"
-Client.TextColor3 = Color3.fromRGB(0, 0, 0)
+Client.TextColor3 = Color3.fromRGB(255, 255, 255)
 Client.TextSize = 16.000
 Client.TextStrokeColor3 = Color3.fromRGB(29, 29, 29)
 
@@ -291,13 +291,13 @@ UICorner_14.Parent = Client
 
 ServerSide_2.Name = "ServerSide"
 ServerSide_2.Parent = TabContainer
-ServerSide_2.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+ServerSide_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
 ServerSide_2.BorderColor3 = Color3.fromRGB(255, 194, 11)
 ServerSide_2.Position = UDim2.new(0, 3, 0.100000001, 0)
 ServerSide_2.Size = UDim2.new(0, 128, 0, 26)
 ServerSide_2.Font = Enum.Font.ArialBold
 ServerSide_2.Text = "ServerSide"
-ServerSide_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+ServerSide_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 ServerSide_2.TextSize = 16.000
 ServerSide_2.TextStrokeColor3 = Color3.fromRGB(29, 29, 29)
 
