@@ -250,7 +250,7 @@ UICorner_11.Parent = Author
 
 TabContainer.Name = "TabContainer"
 TabContainer.Parent = RagdollHUB
-TabContainer.BackgroundColor3 = Color3.fromRGB(255, 194, 11)
+TabContainer.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 TabContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TabContainer.BorderSizePixel = 0
 TabContainer.Position = UDim2.new(0.016990291, 0, 0.137913302, 0)
