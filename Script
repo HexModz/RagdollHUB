@@ -250,6 +250,7 @@ Tabs.BorderSizePixel = 0
 Tabs.Position = UDim2.new(0.016990291, 0, 0.137913302, 0)
 Tabs.Size = UDim2.new(0, 398, 0, 34)
 
+UICorner_11.CornerRadius = UDim.new(0, 11)
 UICorner_11.Parent = Tabs
 
 Client.Name = "Client"
@@ -263,6 +264,7 @@ Client.Text = "Client"
 Client.TextColor3 = Color3.fromRGB(255, 255, 255)
 Client.TextSize = 16.000
 
+UICorner_12.CornerRadius = UDim.new(0, 9)
 UICorner_12.Parent = Client
 
 ServerSide_2.Name = "ServerSide"
@@ -277,6 +279,7 @@ ServerSide_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 ServerSide_2.TextSize = 16.000
 ServerSide_2.TextWrapped = true
 
+UICorner_13.CornerRadius = UDim.new(0, 9)
 UICorner_13.Parent = ServerSide_2
 
 Changelog.Name = "Changelog"
@@ -290,6 +293,7 @@ Changelog.Text = "Changelog"
 Changelog.TextColor3 = Color3.fromRGB(255, 255, 255)
 Changelog.TextSize = 16.000
 
+UICorner_14.CornerRadius = UDim.new(0, 9)
 UICorner_14.Parent = Changelog
 -- Script
 local function BombScript() 
